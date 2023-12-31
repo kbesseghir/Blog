@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaFacebook,FaTwitter ,FaDribbble, FaBars} from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 
 const Navbar = () => {
     const navItems =[
@@ -11,6 +12,11 @@ const Navbar = () => {
         {path:"/contact",link:"Contact"},
 
     ]
+
+    const [isMenuOpen,setMenuOpen] = useState(false)
+    const toggleMenu=()=>{
+        setMenuOpen(!isMenuOpen)
+    }
 
   return (
    <header className='bg-black text-white fixed top-0 right-0 left-0'>
@@ -28,8 +34,20 @@ const Navbar = () => {
     <a  href='/' className='hover:text-orange-500'><FaDribbble /></a>
     <button className="bg-orange-500 hover:bg-white hover:text-orange-500 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline-orange duration-200 ease-in ">Log in</button>
     </div>
-    <div className='md:hidden'><button><FaBars  className='w-5 h-5'/></button></div>
-   </nav>
+    <div className='md:hidden'><button  onClick={toggleMenu} className='cursor-pointer'>
+    { isMenuOpen?<FaXmark className='w-5 h-5' />:<FaBars  className='w-5 h-5'/>}
+    
+    </button>
+    </div>
+    </nav>
+    <div>
+    <ul className={`md:hidden  gap-12 block bg-white text-lg mt-14 space-y-4 px-4 py-6 ${isMenuOpen ? " fixed top-0 left-0  w-full transition-all ease-out duration-150" : "hidden"} `}>
+    {navItems.map(({path,link})=>
+        <li  className='text-black' key={path}>
+        <NavLink  onClick={toggleMenu} to={path}>{link}</NavLink>
+        </li>)}
+    </ul>
+    </div>
    </header>
   )
 }
