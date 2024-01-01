@@ -19,13 +19,16 @@ const Navbar = () => {
     }
 
   return (
-   <header className='bg-black text-white fixed top-0 right-0 left-0'>
+   <header className='bg-black  text-white fixed top-0 right-0 left-0'>
    <nav className='px-4 py-4 flex justify-between items-center max-w-7xl mx-auto' > 
    <a href='/' className=' text-xl text-white font-bold' >Design<span className='text-orange-500'>BK</span></a>
     <ul className='md:flex gap-12 text-lg hidden'>
     {navItems.map(({path,link})=>
         <li  className='text-white' key={path}>
-        <NavLink to={path}>{link}</NavLink>
+        <NavLink   className={({ isActive }) =>
+        isActive ? "active" : ""
+      } to={path}>{link}</NavLink>
+        
         </li>)}
     </ul>
     <div className='text-white lg:flex gap-4 hidden items-center'>
