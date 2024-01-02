@@ -25,10 +25,10 @@ const BlogPage = () => {
   
     },[currentPage,pageSize,selectedCategory])
 
-    const handelPageChange= (pageNumber)=>{
+    const handelPageChange = (pageNumber)=>{
         setCurrentPage(pageNumber)
     }
-    const handelCategoryChange= (category)=>{
+    const handelCategoryChange = (category)=>{
         setSelectedCategory(category)
         setCurrentPage(1)
         setActiveCategory(category)
