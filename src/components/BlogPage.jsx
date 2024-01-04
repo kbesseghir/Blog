@@ -38,7 +38,8 @@ const BlogPage = () => {
    
   return (
     <div>
-    <div><CategorySel onSelectCategory={handelCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory}/></div>
+    <div>
+    <CategorySel onSelectCategory={handelCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory}/></div>
 
     <div className='flex flex-col lg:flex-row gap-10'>
     <BlogCard blogs ={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
