@@ -26,7 +26,7 @@ const Sidebar = () => {
 
             <div>
                 {popularBlogs.length > 0 ? (
-                    popularBlogs.slice(0, 5).map((blog) => (
+                    popularBlogs.slice(0, 12).map((blog) => (
                         <div key={blog.id} className="mb-4">
                             <h4 className=" font-semibold mb-2">{blog.title.slice(0,70)} ...</h4>
                             <Link
