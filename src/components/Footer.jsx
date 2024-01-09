@@ -65,7 +65,23 @@ const Footer = () => {
     <li>
     <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>Forum</a></li>
     <li>
-    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'></a></li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>projects</a></li>
+    </ul>
+    
+    </div>
+    <div className='md:max-w-md lg:col-span-2 mt-5 lg:mt-0'  >
+    <p className='font-medium tracking-wide text-gray-300'> subscribe for updates</p>
+    <ul className='mt-2 space-y-2'>
+    <li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>Infopreneur</a></li>
+    <li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>Personal</a></li>
+    <li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>Wiki</a></li>
+    <li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>Forum</a></li>
+    <li>
+    <a href='/' className='text-gray-500 transition-colors duration-300 hover:text-orange-500'>projects</a></li>
     </ul>
     
     </div>
