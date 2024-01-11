@@ -11,7 +11,8 @@ const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
     <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-8">
       {filteredBlogs.map((blog) => {
         return (
-          <Link
+          <>
+          <div
             key={blog.id}
             className="max-w-md mx-auto bg-white  rounded-xl   shadow-lg mb-4"
           >
@@ -34,7 +35,8 @@ const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
 
               <div></div>
             </div>
-          </Link>
+          </div>
+          </>
         );
       })}
     </div>
